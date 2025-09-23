@@ -8,17 +8,17 @@ import ThirdSection from './components/ThirdSection'
 const App = () => {
   return (
     <div>
-      <div className='h-[200vh]'>
-        <div className='sticky overflow-hidden -z-10 top-0 h-screen'>
+      <div className='relative h-[200vh]'>
+        <div className='sticky overflow-hidden z-1 top-0 h-screen'>
           <Navbar />
           <HeroSection />
        </div>
-       <div className='h-screen  z-80'>
+       <div className='h-screen  z-50'>
           <SecondSection/>
        </div>
       </div>
       <ThirdSection />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

@@ -4,9 +4,9 @@ import component from '../assets/Component 2.png'
 
 const SecondSection = () => {
   return (
-    <div className='bg-[#FAF3EB] z-80 rounded-t-[24px] h-screen '>
+    <div className='bg-[#FAF3EB] z-80 absolute w-full rounded-t-[24px] h-screen '>
       <h1 className="text-4xl text-[#0B1956]  pt-[50px] px-[50px]  sm:text-5xl lg:text-7xl font-medium leading-[1.5]  playfair">
-       <span>Crafted for</span> <br /> <span className='px-[3.3em] '>the few</span>
+       <div className='flex  flex-col'><span>Crafted for</span> <span className='mx-[3.3em] -mt-10 '>the few</span></div>
       </h1>
       <div className='flex gap-[48px]'>
             <div className=''>
