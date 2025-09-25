@@ -2,10 +2,10 @@ import React from 'react'
 import pool from '../assets/pool.png'
 import { useState } from 'react'
 import arrow from '../assets/arrowblueright.svg'
-import frame29 from '../assets/Frame 29.png'
-import frame29one from '../assets/Frame 29 (1).png'
-import frame29two from '../assets/Frame 29 (2).png'
-import frame29three from '../assets/Frame 29 (3).png'
+import frame29 from '../assets/Frame29.png'
+import frame29one from '../assets/Frame29 (1).png'
+import frame29two from '../assets/Frame29 (2).png'
+import frame29three from '../assets/Frame29 (3).png'
 
 const ThirdSection = () => {
     const [isHovered , setIsHovered] =useState(false)

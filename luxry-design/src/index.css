@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('../assets/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('../public/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
 .playfair {
@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: 'TT Hoves';
-  src: url('../assets/fonts/TT-Hoves-Regular.ttf') format('truetype');
+  src: url('../public/fonts/TT-Hoves-Regular.ttf') format('truetype');
 }
 .tthoves {
   font-family: 'TT Hoves', sans-serif;
