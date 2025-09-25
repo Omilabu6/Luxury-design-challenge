@@ -7,9 +7,9 @@ import arrow from '../assets/arrow.png'
 
 const Footer = () => {
   return (
-    <div className='bg-[#0B1956]  text-[#FAF3EB]'>
-    <div className='relative p-[60px] -translate-y-70 h-screen rounded-t-[24px] bg-[#0B1956]'>
-        <div className='flex justify-between text-[20px] tthoves'>
+    <div className='bg-[rgb(11,25,86)]  text-[#FAF3EB]'>
+    <div className='relative flex justify-between flex-col mdd:p-[60px] p-[20px] -translate-y-70 h-screen rounded-t-[24px] bg-[#0B1956]'>
+        <div className='flex flex-col gap-10 md:flex-row justify-between text-[20px] tthoves'>
             <h1 className='text-[40px] italic playfair'>
                    Eterna
             </h1>
@@ -60,7 +60,7 @@ const FooterAnimation = () => {
     <div className=''>
       <div className=''>
         <motion.div
-          className="flex space-x-2 overflow-hidden transition-all ease-in-out text-[31em] text-[#FAF3EB] italic playfair"
+          className="flex space-x-2 overflow-hidden transition-all ease-in-out footer-heading flex-wrap text-[#FAF3EB] italic playfair"
           variants={container}
           initial="hidden" 
           whileInView="visible"
@@ -73,11 +73,11 @@ const FooterAnimation = () => {
           ))}
         </motion.div>
       </div>
-      <div className='flex text-2xl justify-between '>
-        <span className='flex text-[#FAF3EB] flex-row'>Copyright
+      <div className='flex md:flex-row gap-5 flex-col text-2xl justify-between '>
+        <span className='flex  text-[#FAF3EB]'>Copyright
           <img src={copy} alt="" className='w-10 h-10'/>
           Eterna</span>
-       <span className='flex items-center text-[#FAF3EB] justify-center gap-2'>
+       <span className='flex md:items-center text-[#FAF3EB] md:justify-center gap-2'>
           <div className='relative group overflow-hidden' onMouseEnter={ () =>
               setIsHovered(true)}
               onMouseLeave={() =>setIsHovered(false)}>

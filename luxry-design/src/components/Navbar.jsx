@@ -92,7 +92,7 @@ const MenuItem = ({ label }) => {
       />
 
       {/* Text */}
-      <h2 className="text-[64px] playfair font-medium">{label}</h2>
+      <h2 className="md:text-[64px] text-[40px]  playfair font-medium">{label}</h2>
     </div>
 
   );
