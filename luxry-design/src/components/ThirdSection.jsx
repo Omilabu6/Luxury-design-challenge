@@ -10,7 +10,7 @@ import frame29three from '../assets/Frame 29 (3).png'
 const ThirdSection = () => {
     const [isHovered , setIsHovered] =useState(false)
   return (
-    <div className='bg-[#FAF3EB] overflow-hidden'>
+    <div className='bg-[#FAF3EB]   overflow-hidden'>
         <div>
             <h1 className='font-medium pt-20 text-[75px] text-[#0B1956] text-center playfair '>Where Will You Escape To?</h1>
         </div>

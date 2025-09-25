@@ -30,8 +30,6 @@ const Navbar = () => {
             src={isOpen ? close : menue}
             alt="menu"
             className="w-[56px] h-[43px]"
-            // white close button
-            style={{ filter: isOpen ? "invert(1) brightness(100%)" : "invert(0)" }}
             // animate transitions
             initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
             animate={{ opacity: 1, rotate: 0, scale: 1 }}

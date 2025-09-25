@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Footer from "./components/Footer";
-import SecondSection from "./components/SecondSection";
 import ThirdSection from "./components/ThirdSection";
 import first from "./assets/entryLoaderImage/Preloader-1.png";
 import second from "./assets/entryLoaderImage/Preloader-2.png";
@@ -60,6 +59,7 @@ const Preloader = () => {
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [heroDone, setHeroDone] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 4500);
@@ -74,27 +74,27 @@ const App = () => {
       </AnimatePresence>
 
       {/* Website Content */}
-      <motion.div
-        className="relative"
-        initial={{ y: "-100vh" }}
-        animate={{ y: loading ? "-100vh" : "0vh" }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        onAnimationComplete={() => {
-          if (!loading) {
-            window.scrollTo(0, 0);
-          }
-        }}
-      >
-        <div className="">
-          <div className="overflow-hidden">
-            <Navbar />
+      <div className="overflow-hidden">
+        {/* Hero slides in ONLY after preloader */}
+        {!loading && (
+          <motion.div
+            initial={{ y: "-100vh" }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            onAnimationComplete={() => setHeroDone(true)}
+          >
             <HeroSection />
-          </div>
-        
-          <ThirdSection />
-          <Footer />
-        </div>
-      </motion.div>
+          </motion.div>
+        )}
+
+        {/* Rest of site only shows AFTER Hero animation completes */}
+        {heroDone && (
+          <>
+            <ThirdSection />
+            <Footer />
+          </>
+        )}
+      </div>
     </div>
   );
 };
