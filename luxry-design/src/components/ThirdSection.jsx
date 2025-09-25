@@ -1,12 +1,14 @@
 import React from 'react'
 import pool from '../assets/pool.png'
-import arrow from '../assets/arrowblue.png'
+import { useState } from 'react'
+import arrow from '../assets/arrowblueright.svg'
 import frame29 from '../assets/Frame 29.png'
 import frame29one from '../assets/Frame 29 (1).png'
 import frame29two from '../assets/Frame 29 (2).png'
 import frame29three from '../assets/Frame 29 (3).png'
 
 const ThirdSection = () => {
+    const [isHovered , setIsHovered] =useState(false)
   return (
     <div className='bg-[#FAF3EB] overflow-hidden'>
         <div>
@@ -48,7 +50,15 @@ const ThirdSection = () => {
              <div className="absolute inset-0 bg-gradient-to-b from-[#FAF3EB] via-[#faf3eb52] to-[#faf3eb00]"></div>
             <div className='relative flex flex-col items-center justify-center  '>
                 <h1 className='font-semibold text-[32px] playfair text-[#0B1956]'>What are you waiting for ?</h1>
-                <div className='flex gap-7 pt-18'><h2 className='text-[70px] tthoves text-[#0B1956] font-medium'>BOOK NOW</h2><img src={arrow} alt="" /></div>
+                <div className=' pt-18'>
+                  <div className='relative translate-x-12 w-[566px] mx-auto group overflow-hidden' onMouseEnter={ () => {setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}>
+                     <div className='flex  z-20  gap-7'>
+                         <h2 className='text-[70px] tthoves text-[#0B1956] font-medium'>BOOK NOW</h2>
+                         <img src={arrow} alt="" className={`  transition-all duration-300 ease-in-out ${isHovered ? 'translate-x-4':'translate-x-0' }`} />
+                     </div>
+                      <div className={`w-[456px] h-[5px] -mt-5 transition-all duration-300 ease-in-out rounded-[27px] bg-[#0B1956] ${isHovered ? 'translate-x-0':'-translate-x-full'}`}/>
+                   </div>
+                </div>
             </div>
         </div>
     </div>

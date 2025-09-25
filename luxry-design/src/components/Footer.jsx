@@ -1,11 +1,14 @@
 import React from 'react'
+import { useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion";
 import copy from '../assets/copy.png'
 import arrow from '../assets/arrow.png'
 
+
 const Footer = () => {
   return (
-    <div className='bg-[#0B1956]'>
-    <div className='relative p-[60px] -translate-y-70 h-screen rounded-t-[24px] text-white bg-[#0B1956]'>
+    <div className='bg-[#0B1956]  text-[#FAF3EB]'>
+    <div className='relative p-[60px] -translate-y-70 h-screen rounded-t-[24px] bg-[#0B1956]'>
         <div className='flex justify-between text-[20px] tthoves'>
             <h1 className='text-[40px] italic playfair'>
                    Eterna
@@ -33,11 +36,62 @@ const Footer = () => {
 export default Footer
 
 const FooterAnimation = () => {
+
+  const [isHovered , setIsHovered] =useState(false)
+  
+    const text = "Eterna".split("");
+   // Parent animation (controls the children timing)
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // delay between each letter
+      },
+    },
+  };
+
+  // Each letter animation
+  const letter = {
+    hidden: { opacity: 0, y: 500 },
+    visible: { opacity: 1, y: 0 },
+  };
   return(
     <div className=''>
-       <div className=''><h1 className='text-[31em]  italic playfair'>Eterna</h1></div>
-        <div className='flex text-2xl justify-between '><span className='flex flex-row'>Copyright <img src={copy} alt="" className='w-10 h-10'/>Eterna</span> <span className='flex items-center justify-center gap-2'><span className='border p-3'><img src={arrow} alt="" className='-rotate-90'/></span>BACK TO TOP</span></div>
+      <div className=''>
+        <motion.div
+          className="flex space-x-2 overflow-hidden transition-all ease-in-out text-[31em] text-[#FAF3EB] italic playfair"
+          variants={container}
+          initial="hidden" 
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }} // triggers when in view
+        >
+          {text.map((char, i) => (
+            <motion.span key={i} variants={letter}>
+              {char}
+            </motion.span>
+          ))}
+        </motion.div>
+      </div>
+      <div className='flex text-2xl justify-between '>
+        <span className='flex text-[#FAF3EB] flex-row'>Copyright
+          <img src={copy} alt="" className='w-10 h-10'/>
+          Eterna</span>
+       <span className='flex items-center text-[#FAF3EB] justify-center gap-2'>
+          <div className='relative group overflow-hidden' onMouseEnter={ () =>
+              setIsHovered(true)}
+              onMouseLeave={() =>setIsHovered(false)}>
+              <div className={`bg-[#FAF3EB] transition-transform ease-in duration-300 inset-0 absolute ${isHovered ? 'traslate-y-0 ': 'translate-y-full '}` } style={{transformOrigin:'top'}}/>
+              <div className='border relative z-20 border-[#FAF3EB] p-[8px]'>
+                <img src={arrow} alt="" className={`w-[24px] -rotate-90 
+                  ${isHovered ? 'filter brightness- invert': 'brightness-100 invert-0'}`}/>
+            </div>
+            </div>
+          BACK TO TOP
+        </span>
+      </div>
     
     </div>
   );
  }
+
