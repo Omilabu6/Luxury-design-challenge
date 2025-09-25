@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import frame28 from '../assets/frame28.jpg'
+import frame28 from '../assets/Frame28.jpg'
 import arrowblue from '../assets/arrowblue.png'
 
 const SecondSection = () => {
