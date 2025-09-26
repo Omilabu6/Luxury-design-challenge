@@ -60,7 +60,7 @@ const FooterAnimation = () => {
     <div className=''>
       <div className=''>
         <motion.div
-          className="flex space-x-2 overflow-hidden transition-all ease-in-out footer-heading flex-wrap text-[#FAF3EB] italic playfair"
+          className="flex space-x-2 overflow-hidden transition-all ease-in-out  big-text text-[#FAF3EB] italic playfair"
           variants={container}
           initial="hidden" 
           whileInView="visible"
@@ -73,7 +73,7 @@ const FooterAnimation = () => {
           ))}
         </motion.div>
       </div>
-      <div className='flex md:flex-row gap-5 flex-col text-2xl justify-between '>
+      <div className='flex  md:flex-row gap-5 flex-col text-2xl justify-between '>
         <span className='flex  text-[#FAF3EB]'>Copyright
           <img src={copy} alt="" className='w-10 h-10'/>
           Eterna</span>

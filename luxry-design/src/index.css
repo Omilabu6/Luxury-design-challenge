@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('../public/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
 }
 
 .playfair {
@@ -11,7 +11,7 @@
 }
 @font-face {
   font-family: 'TT Hoves';
-  src: url('../public/fonts/TT-Hoves-Regular.ttf') format('truetype');
+  src: url('/fonts/TT-Hoves-Regular.ttf') format('truetype');
 }
 .tthoves {
   font-family: 'TT Hoves', sans-serif;
@@ -25,55 +25,33 @@
   scrollbar-width: none;     /* Firefox */
 }
 
-/*Paralax effect*/
-.animation, .animation_layer {
-	height: 1000px;
+.big-text {
+  font-size: 6rem;
 }
-
-.animation {
-  display: block;
-	position: relative;
-	z-index: 10;
-}
-
-.animation_layer {
-	width: 100%;
-	position: absolute;
-}
-.animation_layer.parallax {
-	position: fixed;
-}
-
-.footer-heading {
-  font-size: 9rem; /* default mobile */
-}
-@media screen and (min-width: 640px) { /* sm screens */
-  .footer-heading {
-    font-size: 12rem;
-    
+@media screen and (min-width: 468px) {
+  .big-text {
+    font-size: 8.5rem;
   }
+  
 }
 
-@media screen and (min-width: 768px) { /* md screens */
-  .footer-heading {
-    font-size: 15rem;
+@media screen and (min-width: 768px) {
+  .big-text {
+    font-size: 14.5rem;
   }
+  
 }
 
-@media screen and (min-width: 812px) { /* md screens */
-  .footer-heading {
+@media screen and (min-width: 925px) {
+  .big-text {
     font-size: 17rem;
   }
+  
 }
 
-@media screen and (min-width: 1024px) { /* lg screens */
-  .footer-heading {
-    font-size: 18rem;
+@media screen and (min-width: 1163px) {
+  .big-text {
+    font-size: 22rem;
   }
-}
-
-@media screen and (min-width: 1280px) { /* xl screens */
-  .footer-heading {
-    font-size: 31rem;
-  }
+  
 }

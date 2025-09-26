@@ -12,7 +12,7 @@ const ThirdSection = () => {
   return (
     <div className='bg-[#FAF3EB]   overflow-hidden'>
         <div>
-            <h1 className='font-medium pt-20 md:text-[75px] text-[55px] text-[#0B1956] text-center playfair '>Where Will You Escape To?</h1>
+            <h1 className='font-medium pt-20 md:text-[75px] text-[50px] text-[#0B1956] text-center playfair '>Where Will You Escape To?</h1>
         </div>
        <div className="px-10 py-16 mb-50">
         <div className="flex gap-28 mb-20 justify-buttom items-baseline overflow-x-auto scroll-smooth no-scrollbar">
@@ -49,11 +49,11 @@ const ThirdSection = () => {
              ></div>
              <div className="absolute inset-0 bg-gradient-to-b from-[#FAF3EB] via-[#faf3eb52] to-[#faf3eb00]"></div>
             <div className='relative flex flex-col items-center justify-center  '>
-                <h1 className='font-semibold text-[32px] playfair text-[#0B1956]'>What are you waiting for ?</h1>
-                <div className=' pt-18'>
+                <h1 className='font-semibold text-[25px] md:text-[32px] playfair text-[#0B1956]'>What are you waiting for ?</h1>
+                <div className='ml-10 pt-18'>
                   <div className='relative md:translate-x-12 translate-x-22 w-[566px] mx-auto group overflow-hidden' onMouseEnter={ () => {setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}>
                      <div className='flex  z-20  gap-7'>
-                         <h2 className='md:text-[70px] text-[55px] tthoves text-[#0B1956] font-medium'>BOOK NOW</h2>
+                         <h2 className='md:text-[70px] text-[45px]  tthoves text-[#0B1956] font-medium'>BOOK NOW</h2>
                          <img src={arrow} alt="" className={`  transition-all duration-300 ease-in-out ${isHovered ? 'translate-x-4':'translate-x-0' }`} />
                      </div>
                       <div className={`w-[456px] h-[5px] -mt-5 transition-all duration-300 ease-in-out rounded-[27px] bg-[#0B1956] ${isHovered ? 'translate-x-0':'-translate-x-full'}`}/>

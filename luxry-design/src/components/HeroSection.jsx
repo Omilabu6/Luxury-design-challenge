@@ -98,14 +98,14 @@ const HeroSection = () => {
         <ParallaxLayer offset={0} speed={0.3}>
           <div className="flex flex-col justify-around h-screen px-6 text-center">
             {/* Main Heading */}
-            <h1 className="text-[80px] pt-20 text-[#0B1956] font-medium  playfair mb-8 ">
+            <h1 className="md:text-[80px] text-[60px] pt-20 text-[#0B1956] font-medium  playfair mb-8 ">
               Escape. Indulge. Arrive
             </h1>
 
             {/* Subtitle */}
-            <div className="flex px-[40px] gap-[24px] flex-col justify-start items-start ">
+            <div className="flex px-[10px] md:px-[40px] gap-[24px] flex-col justify-start items-start ">
               <div className="max-w-2xl ">
-                <h2 className="text-[32px] text-start font-medium text-[#FAF3EB] ">
+                <h2 className="md:text-[32px] text-[27px] text-start font-medium text-[#FAF3EB] ">
                   Where every destination <br /> feels like a 
                   private masterpiece
                 </h2>
