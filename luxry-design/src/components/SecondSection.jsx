@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import frame28 from '../assets/Frame28.jpg'
 import arrowblue from '../assets/arrowblue.png'
 
 const SecondSection = () => {
@@ -22,7 +21,7 @@ const SecondSection = () => {
         {/* Image Container */}
         <div className='flex justify-center md:justify-start md:flex-shrink-0'>
           <img 
-            src={frame28} 
+            src="/Frame28.webp"
             alt="" 
             className='mx-4 sm:mx-6 md:mx-8 lg:mx-[40px] my-6 sm:my-8 md:my-10 w-full max-w-[280px] sm:max-w-[300px] md:max-w-[322px] h-auto md:w-[322px] md:h-[408px] object-cover rounded-lg'
           />
