@@ -29,7 +29,7 @@ const SecondSection = () => {
         </div>
         
         {/* Text Content */}
-        <div className='flex flex-col justify-center px-2 sm:px-4 md:px-0'>
+        <div className='flex flex-col  px-2 sm:px-4 md:px-0'>
           <h1 className='w-full md:max-w-[600px] lg:w-[652px] text-base sm:text-lg md:text-[18px] lg:text-[20px] tthoves pt-4 md:pt-6 lg:pt-10 leading-relaxed text-[#0B1956]'>
             For discerning travelers, the world is not a checklist — it's a canvas. We handpick destinations, curate experiences, and design seamless escapes reserved only for those who demand the extraordinary. From the first call to the final destination, every detail is handled with discretion and care.
           </h1>
