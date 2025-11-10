@@ -60,7 +60,7 @@ const Navbar = () => {
               <MenuItem label="HOME" />
               <MenuItem label="ABOUT" />
               <MenuItem label="DESTINATION" />
-              <MenuItem label="CONTACT" />
+              <MenuItem label="CONTACT US" />
             </div>
           </motion.div>
         )}

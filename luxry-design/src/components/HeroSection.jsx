@@ -52,7 +52,7 @@ const HeroSection = () => {
               {/* Button */}
               <div className="relative">
                 <button
-                  className="group relative overflow-hidden border-2 border-[#FAF3EB] py-[8px] px-[20px]  transition-all duration-500 cursor-pointer "
+                  className="group relative overflow-hidden border border-[#FAF3EB] py-[8px] px-[20px]  transition-all duration-500 cursor-pointer "
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >

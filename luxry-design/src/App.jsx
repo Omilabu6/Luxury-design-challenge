@@ -67,7 +67,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative bg-[#0B1956]">
       {/* Preloader */}
       <AnimatePresence mode="wait">
         {loading && <Preloader />}

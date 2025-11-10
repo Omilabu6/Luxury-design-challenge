@@ -11,7 +11,7 @@ const SecondSection = () => {
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[#0B1956] pt-6 sm:pt-8 md:pt-[50px] px-4 sm:px-6 md:px-8 lg:px-[50px] font-medium leading-[1.2] sm:leading-[1.3] md:leading-[1.5] playfair">
         <div className='flex flex-col'>
           <span>Crafted for</span> 
-          <span className='sm:mx-[1em] md:mx-[2em] lg:mx-[3.3em] -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-10'>the few</span>
+          <span className='sm:mx-[1em] md:mx-[2em] lg:mx-[3.3em] -mt-1 sm:-mt-2 md:-mt-4 lg:-mt-6'>the few</span>
         </div>
       </h1>
       
@@ -51,7 +51,7 @@ const SecondSection = () => {
                   src={arrowblue} 
                   alt="" 
                   className={`w-5 sm:w-[24px] rotate-90 transition-all duration-300 ${
-                    isHovered ? 'filter brightness-0 invert' : 'brightness-100 invert-0'
+                    isHovered ? 'filter brightness-0 invert translate-y-1' : 'brightness-100 invert-0 translate-y-0'
                   }`}
                 />
               </div>
